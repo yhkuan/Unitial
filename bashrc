@@ -43,12 +43,16 @@ alias ssh='ssh -v'
 #cd
 alias cd..='\cd ..'
 alias cd...='\cd ../..'
+alias ..="\cd .."
+alias ...="\cd ../.."
+alias ....="\cd ../../.."
+alias .....="\cd ../../../.."
 
 #other alias
 alias c='clear'
 alias sudo='\sudo -E'
 alias du='\du -h'
-alias df='\df -h'
+alias df='\df -hT'
 alias free='\free -h'
 alias wgetncc='wget --no-check-certificate'
 
@@ -63,6 +67,7 @@ if [ -e ~/.bash_history ]; then
     complete -W "$(echo $(grep '^dig ' ~/.bash_history | sort -u | sed 's/^dig //'))" dig
     complete -W "$(echo $(grep '^telnet ' ~/.bash_history | sort -u | sed 's/^telnet //'))" telnet
     complete -W "$(echo $(grep '^mosh ' ~/.bash_history | sort -u | sed 's/^mosh //'))" mosh
+    complete -W "$(echo $(grep '^xfreerdp ' ~/.bash_history | sort -u | sed 's/^xfreerdp //'))" xfreerdp
 fi
 
 #git auto completion

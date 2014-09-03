@@ -46,11 +46,15 @@ alias ssh='ssh -v'
 #cd
 alias cd..='\cd ..'
 alias cd...='\cd ../..'
+alias ..='\cd ..'
+alias ...='\cd ../..'
+alias ....='\cd ../../..'
+alias .....='\cd ../../../..'
 
 #other alias
 alias c='clear'
 alias sudo='\sudo -E'
-alias df='\df -h'
+alias df='\df -hT'
 alias du='\du -h'
 alias free='\free -h'
 alias wgetncc='wget --no-check-certificate'
